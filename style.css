@@ -1,0 +1,178 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+	/* The image used */
+	background-image: url("assets/background.png");
+
+	/* Set a specific height */
+	min-height: 500px;
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1 {
+	text-align: center;
+	padding: 25px;
+	color: white;
+}
+
+.recherche-poke {
+	max-width: 700px;
+	width: 70%;
+	min-width: 450px;
+	margin: 30px auto;
+	position: relative;
+	display: flex;
+}
+inp-group {
+	width: 100%;
+}
+.recherche-poke input {
+	width: 100%;
+	padding: 15px;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	font-size: 18px;
+}
+.recherche-poke label {
+	position: absolute;
+	color: #333;
+	top: 50%;
+	transform: translateY(-50%);
+	padding-left: 8px;
+	transition: all 0.3s ease-in;
+}
+
+.recherche-poke button {
+	margin-left: 5px;
+	padding: 15px;
+}
+
+/* Animation Input */
+.recherche-poke:focus-within label,
+.recherche-poke.active-input label {
+	top: -15px;
+	padding-left: 5px;
+	color: white;
+}
+
+/* Liste des cartes  */
+.container {
+	width: 70%;
+	max-width: 1100px;
+	height: auto;
+	margin: 0 auto;
+}
+ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.liste-poke li {
+	width: 250px;
+	height: auto;
+	padding: 15px;
+	margin: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(120, 200, 80, 0.6);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border-radius: 10px;
+}
+.liste-poke .typeLogo {
+	width: 45px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.liste-poke h5 {
+	font-size: 19px;
+}
+.liste-poke p {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* Loader Animation */
+.loader {
+	position: absolute;
+	top: 250px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 200px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.point {
+	margin: 0px 5px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: white;
+	animation: monte 0.3s alternate infinite;
+}
+.point:nth-child(1) {
+	animation-delay: 0.1s;
+}
+.point:nth-child(2) {
+	animation-delay: 0.2s;
+}
+.point:nth-child(3) {
+	animation-delay: 0.3s;
+}
+
+@keyframes monte {
+	100% {
+		transform: translateY(-30px);
+	}
+}
+
+.background .pokemon {
+	position: fixed;
+	top: 87px;
+	right: -400px;
+	animation:  15s linear infinite move;
+	
+}
+
+@keyframes move{
+	0% {
+		right: -400px;
+	}
+	10% {
+		right: 2000px;
+	}
+	100% {
+		right: 2000px;
+	}
+}
+
+.background .character {
+	position: fixed;
+	bottom: 20px;
+	right: -400px;
+	animation:  45s linear infinite move;
+}

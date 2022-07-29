@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Pokedex</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	</head>
+	<body>
+		<div class="background">
+			<img
+				src="/assets/bg-character.png"
+				alt="character"
+				class="character"
+			/>
+			<img src="/assets/bg-pokemon.png" alt="Pokemon" class="pokemon" />
+		</div>
+
+		<h1>Bienvenue dans le Pokedex</h1>
+
+		<form class="recherche-poke">
+			<label for="recherche">Chercher un Pokemon</label>
+			<input type="text" id="recherche" />
+
+			<div class="loader">
+				<div class="point"></div>
+				<div class="point"></div>
+				<div class="point"></div>
+			</div>
+		</form>
+
+		<div class="container">
+			<ul class="liste-poke"></ul>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
